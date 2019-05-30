@@ -7,6 +7,7 @@ public class PersonHandler {
     private final Person[] personArray;
 
     public PersonHandler(Person[] personArray) {
+
         this.personArray = personArray;
     }
 
@@ -21,7 +22,17 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return result;
+
+    //StringBuilder sb = new StringBuilder();
+        int count = 0;
+    while (count < personArray.length) {
+
+
+
+        result = result + personArray[count];
+        count++;
+    }
+           return result;
     }
 
 
@@ -39,6 +50,9 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
+        for(int i = 0; i < personArray.length; i++) {
+           result = result + personArray[i];
+        }
         return result;
     }
 
@@ -54,12 +68,17 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
+        for(Person person : personArray){
+            result = result + person;
 
+        }
         return result;
-    }
+        }
 
 
-    public Person[] getPersonArray() {
-        return personArray;
-    }
+
+
+
+
+
 }
